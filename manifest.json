@@ -1,0 +1,27 @@
+
+{
+    "manifest_version": 3,
+    "name": "History Analyzer",
+    "version": "1.0",
+    "description": "Analyze browser history and block malicious websites",
+    "permissions": [
+        "history",
+        "storage",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "http://localhost:8765/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "History Analyzer"
+    },
+    "icons": {
+        "48": "icon48.svg"
+    }
+}

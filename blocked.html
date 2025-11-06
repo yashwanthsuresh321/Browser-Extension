@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Blocked</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            color: white;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .button {
+            padding: 10px 20px;
+            background: white;
+            color: #1a2a6c;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Website Blocked</h1>
+    <p>This website has been identified as malicious and has been blocked for your protection.</p>
+    <a href="#" class="button" id="backButton">Go Back</a>
+    
+    <script>
+        document.getElementById('backButton').addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

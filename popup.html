@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 350px;
+            padding: 15px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: #4361ee;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a0ca3;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        
+        .btn-success {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #27ae60;
+        }
+        
+        .status {
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 12px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #4361ee;
+            line-height: 1.4;
+        }
+        
+        .status.error {
+            border-left-color: #ff4757;
+            background-color: #ffe6ee;
+        }
+        
+        .status.success {
+            border-left-color: #2ecc71;
+            background-color: #e8f8ef;
+        }
+        
+        .download-link {
+            display: block;
+            margin-top: 10px;
+            color: #4361ee;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        
+        .connection-status {
+            font-size: 10px;
+            text-align: center;
+            margin: 5px 0;
+            padding: 3px;
+            border-radius: 3px;
+        }
+        
+        .connected {
+            background-color: #e8f8ef;
+            color: #27ae60;
+        }
+        
+        .disconnected {
+            background-color: #ffe6ee;
+            color: #ff4757;
+        }
+        /* Replace the existing .clear-results and .loading-bar styles with: */
+.clear-results {
+    position: relative !important;
+    margin-top: 10px !important;
+    z-index: 1000 !important;
+}
+
+.loading-bar {
+    position: relative;
+    z-index: 1;
+}
+
+.results-container {
+    position: relative;
+    min-height: 80px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>History Analyzer</h1>
+            <div id="connectionStatus" class="connection-status disconnected">
+                Checking desktop tool connection...
+            </div>
+        </div>
+        
+        <div class="content">
+            <button id="analyzeBtn" class="btn btn-primary">Generate History File</button>
+            <button id="directImportBtn" class="btn btn-success">Send to Desktop Tool</button>
+            <button id="importBtn" class="btn btn-primary">Import Blocklist</button>
+            <button id="manageBlocklistBtn" class="btn btn-secondary">Manage Blocklist</button>
+            
+            <div id="status" class="status">Ready to scan browsing history</div>
+            <div id="downloadArea"></div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
