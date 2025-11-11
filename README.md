@@ -168,8 +168,8 @@ Or manually visit sample URLs defined in `rules.json`.
 
 ## 🧑‍💻 Author
 
-P Harshamithran
-Navneet Nanda
+P Harshamithran,
+Navneet Nanda,
 Yashwant S
 🧠 Developed as part of a cybersecurity and browser-safety research project.
 
