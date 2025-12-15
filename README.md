@@ -1,4 +1,4 @@
-# 🔍 Browser History Analyzer & Malicious URL Detector
+# 🔍 Browser History Analyzer & Malicious URL Detector:
 
 A **browser extension** integrated with a **Java backend server** that analyzes your browsing history, identifies suspicious or malicious URLs, and provides visual reports for safer web usage.
 
